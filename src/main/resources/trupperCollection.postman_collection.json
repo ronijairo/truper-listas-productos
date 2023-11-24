@@ -1,0 +1,503 @@
+{
+	"info": {
+		"_postman_id": "7add5222-7f44-4a75-b1ab-dc4d216ab55b",
+		"name": "trupperCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4904178"
+	},
+	"item": [
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "getAllProducts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcwMDg1NDk3MywiZXhwIjoxNzAwODY1NzczfQ.EfihmaQ9ShMj5570lQWA3xFWYKEVZOnxLV6nlENIPkY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/truper/api/v1/productos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"truper",
+								"api",
+								"v1",
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "saveProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcwMDg1NDk3MywiZXhwIjoxNzAwODY1NzczfQ.EfihmaQ9ShMj5570lQWA3xFWYKEVZOnxLV6nlENIPkY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":1,\n    \"clave\":\"18156\",\n    \"descripcion\":\"Descripcion de un producto generico 18156\",\n    \"precio\":3547,\n    \"activo\":true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/truper/api/v1/productos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"truper",
+								"api",
+								"v1",
+								"productos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Client",
+			"item": [
+				{
+					"name": "saveClient",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcwMDg1NDk3MywiZXhwIjoxNzAwODY1NzczfQ.EfihmaQ9ShMj5570lQWA3xFWYKEVZOnxLV6nlENIPkY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":1,\n    \"nombre\":\"720010\",\n    \"activo\":true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/truper/api/v1/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"truper",
+								"api",
+								"v1",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllClient",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcwMDg1NDk3MywiZXhwIjoxNzAwODY1NzczfQ.EfihmaQ9ShMj5570lQWA3xFWYKEVZOnxLV6nlENIPkY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/truper/api/v1/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"truper",
+								"api",
+								"v1",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "carrito",
+			"item": [
+				{
+					"name": "saveCar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcwMDg1NDk3MywiZXhwIjoxNzAwODY1NzczfQ.EfihmaQ9ShMj5570lQWA3xFWYKEVZOnxLV6nlENIPkY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":1,\n    \"cliente\":{\n        \"id\": 1,\n        \"nombre\": \"710020\",\n        \"activo\": true\n    },\n    \"fechaRegistro\":\"2023-12-01\",\n    \"fechaActualizacion\":\"2023-12-01\",\n    \"activo\":true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/carrito",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"carrito"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllCars",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcwMDg1NDk3MywiZXhwIjoxNzAwODY1NzczfQ.EfihmaQ9ShMj5570lQWA3xFWYKEVZOnxLV6nlENIPkY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/carrito",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"carrito"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCardById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcwMDg1NDk3MywiZXhwIjoxNzAwODY1NzczfQ.EfihmaQ9ShMj5570lQWA3xFWYKEVZOnxLV6nlENIPkY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/carrito/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"carrito",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCard",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcwMDg1NDk3MywiZXhwIjoxNzAwODY1NzczfQ.EfihmaQ9ShMj5570lQWA3xFWYKEVZOnxLV6nlENIPkY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":2,\n    \"cliente\":{\n        \"id\": 1,\n        \"nombre\": \"710020\",\n        \"activo\": true\n    },\n    \"fechaRegistro\":\"2023-11-02\",\n    \"fechaActualizacion\":\"2023-11-02\",\n    \"activo\":false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/carrito/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"carrito",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "getAllBuyList",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcwMDg1NDk3MywiZXhwIjoxNzAwODY1NzczfQ.EfihmaQ9ShMj5570lQWA3xFWYKEVZOnxLV6nlENIPkY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/truper/api/v1/items/obtenerListaCompras",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"truper",
+						"api",
+						"v1",
+						"items",
+						"obtenerListaCompras"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateBuyList",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcwMDg1NDk3MywiZXhwIjoxNzAwODY1NzczfQ.EfihmaQ9ShMj5570lQWA3xFWYKEVZOnxLV6nlENIPkY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":1,\n    \"Carrito\":{\n            \"id\":1,\n            \"cliente\":{\n                \"id\": 1,\n                \"nombre\": \"ejemplo34\",\n                \"activo\": true\n            },\n            \"fechaRegistro\":\"2023-12-01\",\n            \"fechaActualizacion\":\"2023-12-01\",\n            \"activo\":true\n        },\n    \"Producto\":{\n                \"id\":1,\n                \"clave\":\"00002323\",\n                \"descripcion\":\"Esto es una descripcion de producto\",\n                \"precio\":20330,\n                \"activo\":true\n            },\n    \"cantidad\":2,\n    \"precio\":246\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/truper/api/v1/items/actualizarListaCompra/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"truper",
+						"api",
+						"v1",
+						"items",
+						"actualizarListaCompra",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveBuyList",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcwMDg1NDk3MywiZXhwIjoxNzAwODY1NzczfQ.EfihmaQ9ShMj5570lQWA3xFWYKEVZOnxLV6nlENIPkY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":1,\n    \"Carrito\":{\n            \"id\":1,\n            \"cliente\":{\n                \"id\": 1,\n                \"nombre\": \"710020\",\n                \"activo\": true\n            },\n            \"fechaRegistro\":\"2023-12-01\",\n            \"fechaActualizacion\":\"2023-12-01\",\n            \"activo\":true\n        },\n    \"Producto\":{\n                \"id\":1,\n                \"clave\":\"10200\",\n                \"descripcion\":\"Esto es una descripcion de producto 10200\",\n                \"precio\":20330,\n                \"activo\":true\n            },\n    \"cantidad\":2,\n    \"precio\":246\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/truper/api/v1/items/guardarListaCompra",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"truper",
+						"api",
+						"v1",
+						"items",
+						"guardarListaCompra"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "generateToken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"admin\",\n    \"password\":\"admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/truper/api/v1/authenticate/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"truper",
+						"api",
+						"v1",
+						"authenticate",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteBuyList",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcwMDg1NDk3MywiZXhwIjoxNzAwODY1NzczfQ.EfihmaQ9ShMj5570lQWA3xFWYKEVZOnxLV6nlENIPkY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/truper/api/v1/items/eliminarListaCompra/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"truper",
+						"api",
+						"v1",
+						"items",
+						"eliminarListaCompra",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
