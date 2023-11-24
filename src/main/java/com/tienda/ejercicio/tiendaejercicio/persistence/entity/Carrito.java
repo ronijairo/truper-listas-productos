@@ -12,19 +12,17 @@ import javax.persistence.*;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "Lista_compra")
-public class ListaCompra {
+@Table(name = "compras")
+public class Carrito {
 
-    @EmbeddedId
-    private ListaCompraId id;
+	@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-    @MapsId("customerId")
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "customer_id", nullable = false)
-    private Cliente customer;
+    @ManyToOne
+    @JoinColumn(name = "cliente_id")
+    private Cliente cliente;
 
-    @Column(name = "nombre", length = 45)
-    private String nombre;
 
     @Column(name = "fecha_registro", length = 45)
     private String fechaRegistro;

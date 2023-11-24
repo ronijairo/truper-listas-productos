@@ -1,6 +1,5 @@
 package com.tienda.ejercicio.tiendaejercicio.domian.dto;
 
-import com.tienda.ejercicio.tiendaejercicio.persistence.entity.Cliente;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

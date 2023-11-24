@@ -1,8 +1,6 @@
 package com.tienda.ejercicio.tiendaejercicio.web.config;
 
 import com.tienda.ejercicio.tiendaejercicio.persistence.crud.StoreJpaRepository;
-import com.tienda.ejercicio.tiendaejercicio.persistence.entity.Cliente;
-import com.tienda.ejercicio.tiendaejercicio.persistence.entity.Producto;
 import com.tienda.ejercicio.tiendaejercicio.util.Utils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
