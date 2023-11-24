@@ -1,5 +1,7 @@
 package com.tienda.ejercicio.tiendaejercicio.web.config;
 
+import com.tienda.ejercicio.tiendaejercicio.persistence.crud.StoreJpaRepository;
+import com.tienda.ejercicio.tiendaejercicio.persistence.entity.Producto;
 import com.tienda.ejercicio.tiendaejercicio.util.Utils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,10 +27,10 @@ public class LoadDatabase {
 			Date date = Utils.getDateSystem();
 	    	log.info("uuid :" + id + " Date: "+ date);
 			List<Producto> productos = new ArrayList<Producto>();
-			productos.add(new Producto(1,"999923","Esto es una descipcion", true));
-			productos.add(new Producto(2,"9999rg23","Esto es una descipcion", true));
+			//productos.add(new Producto(1,"999923","Esto es una descipcion", true));
+			//productos.add(new Producto(2,"9999rg23","Esto es una descipcion", true));
 
-			Cliente clientes = new Cliente(1,"710020", true);
+			//Cliente clientes = new Cliente(1,"710020", true);
 
 			log.info("Preloading ");
 	    };

@@ -1,4 +1,4 @@
-package com.tienda.ejercicio.tiendaejercicio.domian.repository;
+package com.tienda.ejercicio.tiendaejercicio.domian.service;
 
 import com.tienda.ejercicio.tiendaejercicio.domian.dto.ProductoDto;
 import com.tienda.ejercicio.tiendaejercicio.persistence.crud.ProductJpaRepository;
