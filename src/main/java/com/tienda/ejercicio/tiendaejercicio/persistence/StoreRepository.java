@@ -1,8 +1,6 @@
 package com.tienda.ejercicio.tiendaejercicio.persistence;
 
 
-import com.tienda.ejercicio.tiendaejercicio.domian.repository.StoreDomianRepository;
-import com.tienda.ejercicio.tiendaejercicio.persistence.crud.StoreJpaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
