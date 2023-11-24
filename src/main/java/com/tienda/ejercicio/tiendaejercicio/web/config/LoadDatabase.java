@@ -1,7 +1,5 @@
-package com.tienda.ejercicio.tiendaejercicio.domian;
+package com.tienda.ejercicio.tiendaejercicio.web.config;
 
-import com.tienda.ejercicio.tiendaejercicio.persistence.crud.ClientJpaRepository;
-import com.tienda.ejercicio.tiendaejercicio.persistence.crud.ProductJpaRepository;
 import com.tienda.ejercicio.tiendaejercicio.persistence.crud.StoreJpaRepository;
 import com.tienda.ejercicio.tiendaejercicio.persistence.entity.Cliente;
 import com.tienda.ejercicio.tiendaejercicio.persistence.entity.Producto;
@@ -20,20 +18,6 @@ import java.util.List;
 @Configuration
 public class LoadDatabase {
 	private static final Logger log = LoggerFactory.getLogger(LoadDatabase.class);
-
-	@Bean
-	CommandLineRunner initDatabaseProduct(ProductJpaRepository repository) {
-		return args -> {
-			log.info("Preloading  productos >>>>>> ", repository.save(new Producto(1,"999923","Esto es una descipcion", true)));
-		};
-	}
-
-	@Bean
-	CommandLineRunner initDatabaseClient(ClientJpaRepository repository) {
-		return args -> {
-			log.info("Preloading  clientes >>>>>> ", repository.save( new Cliente(1,"710020", true)));
-		};
-	}
 
 	  @Bean
 	  CommandLineRunner initDatabase(StoreJpaRepository repository) {

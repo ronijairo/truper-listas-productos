@@ -1,7 +1,5 @@
 package com.tienda.ejercicio.tiendaejercicio.domian.repository;
 
-import com.tienda.ejercicio.tiendaejercicio.domian.ListaCompraDto;
-
 import java.util.List;
 
 public interface StoreDomianRepository {

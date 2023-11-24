@@ -1,6 +1,5 @@
 package com.tienda.ejercicio.tiendaejercicio.persistence.mapper;
 
-import com.tienda.ejercicio.tiendaejercicio.domian.ListaCompraDetalleDto;
 import com.tienda.ejercicio.tiendaejercicio.persistence.entity.ListaCompraDetalle;
 import org.mapstruct.*;
 
